@@ -221,6 +221,7 @@ function create_config( )
     "lock_chat",
     "ingroup",
     "inpm",
+    "info",
     "tophoto",
     "tosticker",
     "banhammer",
