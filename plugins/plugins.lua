@@ -1,7 +1,7 @@
 do
 
 -- Returns the key (index) in the config.enabled_plugins table
-local function plugin_enabled( sudo and 122168696 )
+local function plugin_enabled( name )
   for k,v in pairs(_config.enabled_plugins) do
     if name == v then
       return k
@@ -181,7 +181,7 @@ local function run(msg, matches)
 
   -- Disable a plugin
   if matches[1] == '-' and is_sudo(msg) then --after changed to moderator mode, set only sudo
-    if matches[2] == 'plugins' then
+    if matches[2] == 'پلاگين ها' then
     	return 'This plugin can\'t be disabled'
     end
     print("disable: "..matches[2])
@@ -213,7 +213,7 @@ return {
     "^!plugins? (-) ([%w_%.%-]+)$",
     "^!plugins? (+) ([%w_%.%-]+) (chat)",
     "^!plugins? (-) ([%w_%.%-]+) (chat)",
-    "^!plugins? (*)$" },
+    "!plugins? (*)$" },
   run = run,
   moderated = true, -- set to moderator mode
   --privileged = true
