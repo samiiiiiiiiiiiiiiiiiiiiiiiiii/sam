@@ -223,6 +223,7 @@ function create_config( )
     "lock_tag",
     "info_setrank",
     "linkpv",
+    "plugins",
     "ingroup",
     "inpm",
     "info",
