@@ -218,6 +218,7 @@ function create_config( )
     "lock_share",
     "lock_media",
     "lock_arabic",
+    "info",
     "lock_chat",
     "lock_join",
     "lock_tag",
