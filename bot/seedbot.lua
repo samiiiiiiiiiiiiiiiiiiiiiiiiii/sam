@@ -208,6 +208,7 @@ function create_config( )
   -- A simple config with basic plugins and ourselves as privileged user
   config = {
     enabled_plugins = {
+    "spam",
     "download_media",
     "lock_link",
     "lock_share",
