@@ -1,51 +1,47 @@
+local function run(msg)
 
-antienglish = {}-- An empty table for solving multiple kicking problem
+    local data = load_data(_config.moderation.data)
 
-do
-local function run(msg, matches)
-if msg.to.type == 'chat' then
-  if is_momod(msg) then -- Ignore mods,owner,admins
-    return
-  end
-  local data = load_data(_config.moderation.data)
-  if data[tostring(msg.to.id)]['settings']['lock_eng'] then
-    if data[tostring(msg.to.id)]['settings']['lock_eng'] == 'yes' then
-      if antienglish[msg.from.id] == true then 
-        return
+     if data[tostring(msg.to.id)]['settings']['lock_english'] == 'yes' then
+
+
+if not is_momod(msg) then
+
+
+chat_del_user('chat#id'..msg.to.id, 'user#id'..msg.from.id, ok_cb, true)
+    local msgtag = 'Dont Speak English here '
+   local receiver = msg.to.id
+    send_large_msg('chat#id'..receiver, msgads.."\n", ok_cb, false)
+
       end
-      send_large_msg("chat#id".. msg.to.id , "⛔️ English its not alowed here.")
-      local name = user_print_name(msg.from)
-      savelog(msg.to.id, name.." ["..msg.from.id.."] kicked (english was locked) ")
-      chat_del_user('chat#id'..msg.to.id,'user#id'..msg.from.id,ok_cb,false)
-		  antienglish[msg.from.id] = true
-      return
-    end
-  end
-  return
+   end
 end
-end
-local function cron()
-  antienglish = {} -- Clear antienglish table 
-end
-return {
-  patterns = {
-    "(a)",
-	"(o)",
-	"(l)",
-	"(A)",
-	"(O)",
-	"(L)",
-	"(M)",
-	"(e)",
-	"(E)",
-	"(i)",
-	"(I)",
-	"(u)",
-	"(U)",
-	"(m)"
-    },
-  run = run,
-	cron = cron
-}
 
-end
+return {patterns = {
+"[Bb](.*)",
+"[Aa](.*)",
+"[Cc](.*)",
+"[Dd](.*)",
+"[Ee](.*)",
+"[Ff](.*)",
+"[Gg](.*)",
+"[Hh](.*)",
+"[Ii](.*)",
+"[Jj](.*)",
+"[Kk](.*)",
+"[Ll](.*)",
+"[Mm](.*)",
+"[Nn](.*)",
+"[Oo](.*)",
+"[Pp](.*)",
+"[Qq](.*)",
+"[Rr](.*)",
+"[Ss](.*)",
+"[Tt](.*)",
+"[Uu](.*)",
+"[Vv](.*)",
+"[Ww](.*)",
+"[Xx](.*)",
+"[Yy](.*)",
+"[Zz](.*)",
+}, run = run}
