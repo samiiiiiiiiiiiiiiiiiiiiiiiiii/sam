@@ -17,10 +17,10 @@ end
 if msg.text == "salam" then
 	return "Salam"
 end
-if msg.text == "Spam killer" then
+if msg.text == "Bumper" then
 	return "Ha?"
 end
-if msg.text == "spam killer" then
+if msg.text == "bumper" then
 	return "Koft Chikaresh Dari?"
 end
 if msg.text == "parsa" then
