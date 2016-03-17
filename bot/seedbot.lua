@@ -234,6 +234,8 @@ function create_config( )
     "leave_ban",
     "linkpv",
     "lock_arabic",
+    "lock_eng",
+    "lock_badword",
     "lock_chat",
     "lock_join",
     "lock_link",
