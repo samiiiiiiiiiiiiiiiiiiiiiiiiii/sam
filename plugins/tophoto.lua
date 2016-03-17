@@ -1,3 +1,6 @@
+--shared by @samramezani
+--admin: @samramezani
+
 local function tosticker(msg, success, result)
   local receiver = get_receiver(msg)
   if success then
@@ -24,14 +27,15 @@ local function run(msg,matches)
     end
     if matches[1] == "tophoto" and is_momod(msg) then
     	redis:set("sticker:photo", "waiting")
-    	return 'Please send your sticker now'
+    	return 'Please send your sticker now\n By @punisher_official'
     end
 end
 return {
   patterns = {
-  "^(tophoto)$",
-	"^[!/$#](tophoto)$",
+	"^[!/](tophoto)$",
 	"%[(document)%]",
   },
   run = run,
 }
+--shared by @samramezani
+--admin: @samramezani
