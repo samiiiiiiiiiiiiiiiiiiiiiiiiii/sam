@@ -208,17 +208,11 @@ function create_config( )
   -- A simple config with basic plugins and ourselves as privileged user
   config = {
     enabled_plugins = {
-    "onservice",
-    "inrealm",
-    "admin",
-    "anti_bot",
-    "auto_leave",
     "download_media",
     "lock_link",
     "lock_share",
     "lock_media",
     "lock_arabic",
-    "info",
     "lock_chat",
     "lock_join",
     "lock_tag",
