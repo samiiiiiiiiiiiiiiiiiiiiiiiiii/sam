@@ -1,3 +1,6 @@
+--shared by @samramezani
+--@samramezani
+
 local function tosticker(msg, success, result)
   local receiver = get_receiver(msg)
   if success then
@@ -24,7 +27,7 @@ local function run(msg,matches)
     end
     if matches[1] == "tosticker" then
     	redis:set("photo:sticker", "waiting")
-    	return 'Please send your photo now'
+    	return 'Please send your photo now\nBy @punisher_official'
     end
 end
 return {
@@ -34,3 +37,5 @@ return {
   },
   run = run,
 }
+--shared by @samramezani
+--@samramezani
