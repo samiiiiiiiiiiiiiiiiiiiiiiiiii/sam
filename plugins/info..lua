@@ -125,7 +125,7 @@ local function action_by_reply(extra, success, result)-- (reply) /info  function
   local um_hash = 'msgs:'..result.from.id..':'..result.to.id
   user_info_msgs = tonumber(redis:get(um_hash) or 0)
   text = text..'Total messages : '..user_info_msgs..'\n\n'
-  text = text..'@SBSS_Team'
+  text = text..'@samramezani'
   send_msg(extra.receiver, text, ok_cb, true)
 end
 
@@ -197,7 +197,7 @@ local function run(msg, matches)
 	 text = text..'Group name : '..msg.to.title..'\n'
      text = text..'Group ID : '..msg.to.id
     end
-	text = text..'\n\n@SBSS_Team'
+	text = text..'\n\n@samramezani'
     return send_msg(receiver, text, ok_cb, true)
     end
   end
@@ -235,4 +235,4 @@ return {
 
 end
 
--- By SUDO
+-- By samramezani
