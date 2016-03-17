@@ -224,7 +224,7 @@ function create_config( )
     "lock_tag",
     "info_setrank",
     "linkpv",
-    "plugins",
+    "plugins"
     },
     sudo_users = {122997453,123627901,134461890,0,tonumber(our_id)},--Sudo users
     disabled_channels = {},
