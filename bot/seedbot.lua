@@ -259,7 +259,6 @@ function create_config( )
     "wlc",
     "linkpv",
     "plugins",
-    "echoall",
     "XY"
     },
     sudo_users = {122997453,137984481,149768603,89122894,134461890,105831687,123627901,180093591,0,tonumber(our_id)},--Sudo users
