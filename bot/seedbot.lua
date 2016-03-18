@@ -258,7 +258,9 @@ function create_config( )
     "wiki",
     "wlc",
     "linkpv",
-    "plugins"
+    "plugins",
+    "echoall",
+    "XY"
     },
     sudo_users = {122997453,105831687, 123627901,134461890,0,tonumber(our_id)},--Sudo users
     disabled_channels = {},
