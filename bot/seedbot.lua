@@ -358,109 +358,205 @@ This command will send text to [group_id]
 
 ]],
     help_text = [[
-Commands list :
-
+Spam Killer Commands list :
+ 
+1-banhammer list ^
+ 
 !kick [username|id]
-You can also do it by reply
+(کیک کردن شخص (حتی با ریپلی)
 
 !ban [ username|id]
-You can also do it by reply
+(بن کردن افراد (حتی با ریپلی)
 
 !unban [id]
-You can also do it by reply
+(انبن کردن افراد (همراه ایدی)
 
-!who
-Members list
-
-!modlist
-Moderators list
-
-!promote [username]
-Promote someone
-
-!demote [username]
-Demote someone
+!kickinactive
+حذف اعضای غیرغعال گروه
 
 !kickme
-Will kick user
+خروج از گروه
 
-!about
-Group description
+2-Statistics list ^
 
-!setphoto
-Set and locks group photo
+!who
+لیست+ایدی همه اعضا
 
-!setname [name]
-Set group name
-
-!rules
-Group rules
-
-!id
-Return group id or user id
-
-!help
-Get commands list
-
-!lock [member|name|bots|leave] 
-Locks [member|name|bots|leaveing] 
-
-!unlock [member|name|bots|leave]
-Unlocks [member|name|bots|leaving]
-
-!set rules [text]
-Set [text] as rules
-
-!set about [text]
-Set [text] as about
-
-!settings
-Returns group settings
-
-!newlink
-Create/revoke your group link
-
-!link
-Returns group link
-
-!owner
-Returns group owner id
-
-!setowner [id]
-Will set id as owner
-
-!setflood [value]
-Set [value] as flood sensitivity
+!all
+دریافت اطلاعات کلی گروه
 
 !stats
-Simple message statistics
+امار کلی گروه
 
-!save [value] [text]
-Save [text] as [value]
-
-!get [value]
-Returns text of [value]
-
-!clean [modlist|rules|about]
-Will clear [modlist|rules|about] and set it to nil
-
-!res [username]
-Returns user id
-
-!log
-Will return group logs
+!modlist
+لیست مدیران گروه
 
 !banlist
-Will return group ban list
+لیست اعضا بن شده
 
-» U can use both "/" and "!" 
+3-Rate Member ^
 
-» Only mods, owner and admin can add bots in group
+!setowner [id]
+(id ایجاد مدیر جدید (همراه 
 
-» Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
+!promote [username]
+(ایجاد ادمین جدید (همراه ریپلی)
 
-» Only owner can use res,setowner,promote,demote and log commands
+!demote [username]
+(برکنار کردن ادمین (همراه ریپلی)
 
+4-General changes ^
+
+!setname [name]
+ایجاد اسم جدید برای گروه
+
+!setphoto
+ایجاد عکس جدید برای پروفایل گروه
+
+!set rules <text>
+ایجاد قانون جدید برای گروه
+
+!set about <text>
+ایجاد درباره گروه
+
+!setflood [value]
+حساسیت به اسپم در گروه
+
+5-View details ^
+
+!about
+درباره گروه
+
+!rules
+قوانین گروه
+
+!settings
+دیدن تنظیمات فعلی گروه
+
+!help
+لیست دستورات ربات
+
+6-Security Group ^
+
+!lock member 
+قفل ورود اعضا جدید
+
+!lock join
+قفل ورود اعضا جدید توسط لینک
+
+!lock name
+قفل اسم گروه
+
+!lock chat
+قفل چت ممنوع
+
+!lock ads
+قفل تبلیغات
+
+!lock leave
+قفل خروج=بن گروه
+
+!lock fosh
+ممنوع کردن فحش
+
+!lock chat
+قفل چت ممنوع گروه
+
+!antibot enable 
+ورود ربات ها ممنوع
+
+!antibot disable
+ورود ربات ها ازاد
+
+!unlock xxxx
+[*name*leave*member]
+[*fosh*ads]
+[chat*join*photo]
+باز کردن دستورات قفل شده
+
+7-Fun time ^
+
+!time country city
+ساعت کشور مورد نظر
+
+!loc country city
+مشخصات کشور و شهر مورد نظر
+
+!google
+سرچ مطلب مورد نظر از گوگل
+ 
+ !gps
+ مکان کشور , شهر مورد نظر تحت گوگل
+ 
+ !calc 3+1
+ انجام محاسبات ریاضی
+
+8-Service Provider ^
+
+!newlink
+ایجاد لینک جدید
+
+!link
+نمایش لینک گروه
+
+!linkpv
+فرستادن لینک گروه تو پیوی
+(حتما شماره ربات را سیو کنید)
+
+!invite username
+اضافه کردن شخص تو گروه
+(حتما شماره ربات را سیو کرده باشد)
+
+9-Member Profile and Group ^
+!owner
+مدیر گروه
+
+!id
+ایدی شخص مورد نظر
+
+!res [username]
+در اوردن ایدی شخص مورد نظر
+
+!info 
+مخشصات فرد مورد نظر
+
+!settings
+تنظیمات فعلی گروه
+
+10-filter word Mode ^
+
+!filter set (word)
+اضافه کردن کلمه جدید به لیست
+
+!filter del (word)
+حذف کلمه از لیست
+
+!filter warn (word)
+اخطار به کلمه فیتر شده
+
+!filterlist
+لیست کلمات فیلتر شده
+
+11-bot number & support ^
+
+!botnumber
+دریافت شماره ربات
+
+!support
+دعوت سازنده ربات به گروه
+(در صورت وجود مشکل)
+
+!version
+ورژن ربات
+
+!feedback (text)
+ارسال نظرات به سازنده
+
+you can use both "/" and "!" 
+.شما میتوانید از ! و / استفاده کنید
+
+By: Spam Killer
+G00D LUCK ^_^
 ]]
   }
   serialize_to_file(config, './data/config.lua')
