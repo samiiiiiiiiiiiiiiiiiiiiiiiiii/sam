@@ -1251,7 +1251,7 @@ return {
   "^[!/](unlock) (.*)$",
   "^[!/](setflood) (%d+)$",
   "^[!/](settings)$",
--- "^[!/](public) (.*)$",
+  "^[!/](public) (.*)$",
   "^[!/](modlist)$",
   "^[!/](newlink)$",
   "^[!/](link)$",
